@@ -1,14 +1,14 @@
 
-<div class="Haut">
-   <app-abc class="abc"></app-abc>
-   <app-abc class="abc"></app-abc>
-</div>
- 
-<div class="Bas"> 
-  
-  <app-abc class="abc"></app-abc>
-  <app-abc class="abc"></app-abc>
+<div>
+<img [src]="user.photo" [alt]="user.firstName">
+<h1> Nom : {{user.name}} </h1>
+<h2>Prénom : {{user.firstName}} </h2>
+<p id="age" [hidden]="user.isHidden"> J'ai {{user.age}} ans </p>
 
-</div> 
+<p id="citation">{{user.quote}}</p>
+
+<input type="text" [(ngModel)]="user.quote">
+<br>
+<button id="hiden" (click)="age()">Afficher ou masquer âge</button>
 
 

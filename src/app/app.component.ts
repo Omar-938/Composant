@@ -7,4 +7,29 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Composants';
+
+  user = {
+    name : "Doe",
+    firstName : "John",
+    age : 25,
+    isHidden : false,
+    quote : "",
+    photo : 'https://randomuser.me/api/portraits/lego/2.jpg'
+  }
+  
+
+age(){
+
+if(this.user.isHidden === false){
+  this.user.isHidden = true;
+}
+else{
+  this.user.isHidden = false;
+}
+
+};
+
+
+
+
 }
